@@ -1,60 +1,66 @@
 # IT Consulting Salary Analyser
 
-This project analyses global IT job salary data to identify trends based on job roles, experience levels, and locations.
-
-- Source: Kaggle
-- Records: 600+
-- Features:
-  - Job Title
-  - Salary (USD)
-  - Experience Level
-  - Company Location
+Analyse global IT job salary data (600+ records from Kaggle) to surface trends by **job title**, **experience level**, and **company location**.
 
 ## Key Insights
 
-- Data Analytics Lead is the highest paying role on average.
-- Senior-level professionals earn significantly more than entry and mid-level roles.
-- The United States dominates in terms of salary levels.
-- Machine Learning and Data Engineering roles show strong salary growth.
+| # | Finding |
+|---|---------|
+| 1 | **Data Analytics Lead** is the highest-paying role on average. |
+| 2 | Senior-level professionals earn significantly more than Entry and Mid — the Mid → Senior jump is the steepest (~40 %). |
+| 3 | The **United States** dominates salary levels, followed by Russia and New Zealand. |
+| 4 | **Machine Learning** and **Data Engineering** roles show the strongest salary growth. |
 
-## Visualizations
+## Dataset
 
-The project includes:
-- Top 10 highest paying roles
-- Salary by experience level
-- Top paying countries
+- **Source:** [Kaggle – Data Science Job Salaries](https://www.kaggle.com/datasets/ruchi798/data-science-job-salaries)
+- **Records:** 607
+- **Key features:** `job_title`, `salary_in_usd`, `experience_level`, `company_location`, `employment_type`, `remote_ratio`
+
+## Visualisations
+
+### Top Paying Roles
+![Roles](IT-Salary-Analyser/charts/top_roles.png)
+
+### Salary by Experience Level
+![Experience](IT-Salary-Analyser/charts/exp_level.png)
+
+### Top Paying Countries
+![Countries](IT-Salary-Analyser/charts/countries.png)
+
+## How to Explore
+
+The recommended way to read this project is the **Jupyter notebook** — it walks through every step like a story:
+
+```
+IT-Salary-Analyser/IT_Salary_Analyser.ipynb
+```
+
+Open it in **Jupyter**, **VS Code**, or **Google Colab** (File → Upload Notebook).
+
+If you prefer the raw script:
+
+```bash
+cd IT-Salary-Analyser
+pip install -r requirements.txt
+python src/main.py
+```
 
 ## Tech Stack
 
-- Python
-- Pandas
-- Matplotlib
-- Seaborn
-
-## How to Run
-
-1. Clone the repo
-2. Install dependencies:
-   pip install -r requirements.txt
-3. Run:
-   python src/main.py
-
-## Visualizations
-
-### Top Paying Roles
-![Roles](charts/top_roles.png)
-
-### Salary by Experience
-![Experience](charts/exp_level.png)
-
-### Top Countries
-![Countries](charts/countries.png)
+- Python · Pandas · Matplotlib · Seaborn
+- Jupyter Notebook
 
 ## Domain Perspective
 
-From experience in IT consulting environments, these results align with industry trends. 
-Roles like Data Analytics Lead and Principal Data Engineer command higher salaries due to their impact on business decision-making and system architecture.
+Having worked on IT consulting projects where I've seen hiring trends first-hand, these numbers match what I've observed in practice:
 
-Machine Learning and Data Engineering roles attract premium compensation because they directly influence scalable systems and revenue-driving analytics.
+- **ML Engineer salaries are rising fastest.** In recent years, hiring briefs I've come across have consistently prioritised ML Engineer and Data Engineer roles over traditional developer positions — this dataset confirms that trend quantitatively.
+- **The "Senior" jump is real.** Mid-level professionals often plateau until they can demonstrate ownership of end-to-end pipelines or models in production. The ~40 % salary gap between Mid and Senior levels in this data reflects that market reality.
+- **US-centric salary data can be misleading globally.** While US averages dominate, cost-of-living adjustments and purchasing-power parity would paint a more nuanced picture for candidates in India, Eastern Europe, or Southeast Asia. A useful extension would be to normalise salaries by a PPP index.
 
-Additionally, the dominance of US salaries reflects mature tech ecosystems and higher enterprise investment in data infrastructure.
+## Next Steps
+
+- Year-over-year trend analysis using the `work_year` column.
+- Remote vs on-site salary comparison using `remote_ratio`.
+- PPP-adjusted salary normalisation for global comparison.
