@@ -38,3 +38,23 @@ The project includes:
    pip install -r requirements.txt
 3. Run:
    python src/main.py
+
+## Visualizations
+
+### Top Paying Roles
+![Roles](charts/top_roles.png)
+
+### Salary by Experience
+![Experience](charts/exp_level.png)
+
+### Top Countries
+![Countries](charts/countries.png)
+
+## Domain Perspective
+
+From experience in IT consulting environments, these results align with industry trends. 
+Roles like Data Analytics Lead and Principal Data Engineer command higher salaries due to their impact on business decision-making and system architecture.
+
+Machine Learning and Data Engineering roles attract premium compensation because they directly influence scalable systems and revenue-driving analytics.
+
+Additionally, the dominance of US salaries reflects mature tech ecosystems and higher enterprise investment in data infrastructure.
